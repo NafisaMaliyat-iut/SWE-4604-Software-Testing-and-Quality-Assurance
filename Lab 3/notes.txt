@@ -1,0 +1,21 @@
+junit - for unit testing, done after coding
+
+unit testing
+define a unit - class, package, function, bundles of functions.... you geddit
+usually, packages are too large so are not considered as unit. and function is a unit if it is independent
+from other modules. 
+you give different kinds of input and expect the correct output. you don't know what is actually going on 
+inside the unit (black box testing)>. 
+
+F I R S T
+Fast
+Isolated / Independent
+Repeatable 
+Self describing (some amount of documentation so it can define itself)
+Timely
+
+
+JUnit
+Used for java's unit testing
+Gives us assertions which compares the actual and expected result
+For running more than one tests in one go ?, test suites are provided 
