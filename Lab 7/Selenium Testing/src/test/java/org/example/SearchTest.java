@@ -1,4 +1,4 @@
-package org.example.Homepage;
+package org.example;
 
 import org.junit.Test;
 import org.junit.Before;
