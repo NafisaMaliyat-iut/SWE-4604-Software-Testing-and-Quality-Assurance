@@ -1,0 +1,1517 @@
+{
+	"info": {
+		"_postman_id": "1c773775-6135-4c8e-91eb-51070e4cdd77",
+		"name": "LabFinalA_33_SWE4604",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28504867"
+	},
+	"item": [
+		{
+			"name": "Register1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User is successfully created\", function () {\r",
+							"    pm.environment.set(\"user1\", pm.response.json().id); \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"nafisa_133@user.com\",\r\n    \"password\":\"nafisa133\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nafisa_133@user.com\",\r\n    \"password\":\"nafisa133\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverBaseUrl}}/users/register",
+							"host": [
+								"{{serverBaseUrl}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 04:53:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": [\n        \"The first name field is required.\"\n    ],\n    \"last_name\": [\n        \"The last name field is required.\"\n    ],\n    \"password\": [\n        \"The password field must contain at least one uppercase and one lowercase letter.\",\n        \"The password field must contain at least one symbol.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Register3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User is successfully created\", function () {\r",
+							"    pm.environment.set(\"user1\", pm.response.json().id); \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Nafisa\",\r\n    \"last_name\":\"Maliyat\",\r\n    \"phone\":\"1234\",\r\n    \"dob\" :  \"1970-01-01\",\r\n    \"password\":\"Super-Secret-123\",\r\n    \"email\":\"nafisa@doe.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Nafisa\",\r\n    \"last_name\":\"Maliyat\",\r\n    \"phone\":\"1234\",\r\n    \"dob\" :  \"1970-01-01\",\r\n    \"password\":\"Super-Secret-123\",\r\n    \"email\":\"nafisa@doe.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:02:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Nafisa\",\n    \"last_name\": \"Maliyat\",\n    \"phone\": \"1234\",\n    \"dob\": \"1970-01-01\",\n    \"email\": \"nafisa@doe.com\",\n    \"id\": \"01hxge42jjxm1cs2k9kgdvt6hp\",\n    \"created_at\": \"2024-05-10 05:02:57\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User is successfully created\", function () {\r",
+							"    pm.environment.set(\"user1\", pm.response.json().id); \r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Nafisa\",\r\n    \"last_name\":\"Maliyat\",\r\n    \"email\":\"nafisa_133@user.com\",\r\n    \"password\":\"nafisa133\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Nafisa\",\r\n    \"last_name\":\"Maliyat\",\r\n    \"email\":\"nafisa_133@user.com\",\r\n    \"password\":\"nafisa133\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:57:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"password\": [\n        \"The password field must contain at least one uppercase and one lowercase letter.\",\n        \"The password field must contain at least one symbol.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Login1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User is successfully logged in\", function () {\r",
+							"    pm.environment.set(\"access token\", pm.response.json().access_token); \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Super-Secret-123\",\r\n    \"email\":\"nafisa@doe.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"first_name\": \"Nafisa\",\r\n  \"last_name\": \"Doe\",\r\n  \"address\": \"Street 1\",\r\n  \"city\": \"City\",\r\n  \"country\": \"Country\",\r\n  \"email\": \"john@doe.example\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/{{user1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"{{user1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Nafisa\",\r\n  \"last_name\": \"Doe\",\r\n  \"address\": \"Street 1\",\r\n  \"city\": \"City\",\r\n  \"country\": \"Country\",\r\n  \"email\": \"john@doe.example\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/{{user1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{user1}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:05:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Search1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response contains 'safety' in all product names\", function () {\r",
+							"  const responseData = pm.response.json().data;\r",
+							"  const safetyProducts = responseData.filter(product => product.name.toLowerCase().includes('safety'));\r",
+							"  pm.expect(safetyProducts.length).to.equal(responseData.length);\r",
+							"  pm.environment.set(\"Safety\", safetyProducts[0].id);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/search?q=safety",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "safety"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/search?q=safety",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "safety"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:12:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"01HXGDYVWM1B95SC714PAQWBAD\",\n            \"name\": \"Safety Goggles\",\n            \"description\": \"Sed urna lectus, commodo ut dolor finibus, condimentum posuere purus. Phasellus faucibus, ex in congue mattis, purus ipsum tristique sem, vitae elementum arcu metus nec lacus. Fusce convallis tellus ornare metus hendrerit pellentesque. In porta leo in iaculis eleifend. Duis in diam ut ante finibus condimentum non eget massa. Suspendisse potenti. Donec justo ligula, scelerisque ac facilisis eu, sollicitudin eu lectus. Mauris hendrerit fermentum sapien.\",\n            \"price\": 24.26,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEX\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEX\",\n                \"by_name\": \"wilson montoya\",\n                \"by_url\": \"https://unsplash.com/@dogblack22\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/black-framed-sunglasses-with-yellow-lens-Cf_d_nDtOcM\",\n                \"file_name\": \"goggles01.jpeg\",\n                \"title\": \"Safety Goggles\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVWNEGZPTP0YAYDNMJRZ\",\n            \"name\": \"Safety Helmet Face Shield\",\n            \"description\": \"Quisque nisi lectus, laoreet in enim maximus, auctor porta nunc. Vivamus in dui condimentum, aliquam mi cursus, scelerisque nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut facilisis quam sit amet enim commodo ultrices. Quisque ac ante vehicula quam aliquet semper. Phasellus fermentum orci nec dui accumsan, non tincidunt ante facilisis. Ut laoreet blandit euismod.\",\n            \"price\": 35.62,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEY\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEY\",\n                \"by_name\": \"Laurence Ziegler\",\n                \"by_url\": \"https://unsplash.com/@laurenceziegler\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/a-helmet-that-is-on-top-of-a-pile-of-leaves-niKVn6qfYAs\",\n                \"file_name\": \"goggles02.jpeg\",\n                \"title\": \"Safety Helmet Face Shield\"\n            }\n        }\n    ],\n    \"from\": 1,\n    \"last_page\": 1,\n    \"per_page\": 9,\n    \"to\": 2,\n    \"total\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Search2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"The response array length must be 2\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    const data = responseData.data;\r",
+							"   \r",
+							"    pm.expect(data.length).to.equal(2, \"The data array should contain 2 products\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/search?q=Nuts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Nuts"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/search?q=Nuts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Nuts"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:14:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"01HXGDYVWWEWMWZ39NHAG3YEWK\",\n            \"name\": \"Nuts and bolts\",\n            \"description\": \"Phasellus ex dolor, commodo sed lacus vitae, scelerisque dapibus neque. Sed nec arcu sit amet tortor pretium tempor sit amet nec mauris. Ut ultrices magna vitae tortor pharetra pellentesque. Cras auctor vulputate ex, sit amet faucibus ligula volutpat ac. Fusce ultrices malesuada iaculis. Vivamus sit amet orci nibh. Nunc id imperdiet est. Nulla feugiat semper aliquet. Aliquam cursus ex sem, sit amet porttitor enim elementum eu.\",\n            \"price\": 5.55,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYB\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF3\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF3\",\n                \"by_name\": \"Edge2Edge Media\",\n                \"by_url\": \"https://unsplash.com/@edge2edgemedia\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/silver-and-black-metal-tools-qHhJkxare7A\",\n                \"file_name\": \"fasteners02.jpeg\",\n                \"title\": \"Nuts and bolts\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVX0EREX2RDYJRRVPGAY\",\n            \"name\": \"M4 Nuts\",\n            \"description\": \"Maecenas viverra et risus non accumsan. Nullam sodales, leo ac hendrerit fermentum, nulla metus mattis sem, eget sagittis dolor nibh ac nisi. In nec gravida ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi non pretium erat. Sed ac congue nisl. Aenean egestas ac lorem sit amet facilisis. Nullam porta velit non lorem pulvinar, a laoreet orci posuere. Vestibulum sed tellus porta, aliquet magna ut, tincidunt lectus. Morbi ac quam sed nisi placerat tempus. Nam ultrices dignissim lobortis. Nam ut erat pretium, imperdiet sem vel, volutpat magna. Nam luctus volutpat aliquam.\",\n            \"price\": 4.65,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYB\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF6\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF6\",\n                \"by_name\": \"Mika Baumeister\",\n                \"by_url\": \"https://unsplash.com/@kommumikation\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/silver-and-black-round-coins-c71yQepDEjo\",\n                \"file_name\": \"fasteners05.jpeg\",\n                \"title\": \"M4 Nuts\"\n            }\n        }\n    ],\n    \"from\": 1,\n    \"last_page\": 1,\n    \"per_page\": 9,\n    \"to\": 2,\n    \"total\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"All product prices are less than 100 and greater than 50\", function () {\r",
+							"    pm.expect(pm.response.json().data.every(product => product.price < 100 && product.price > 50)).to.be.true;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Set id to Pricey\", function () {\r",
+							"    pm.environment.set(\"Pricey\", pm.response.json().data[0].id);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products?between=50,100",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "between",
+							"value": "50,100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/search?between=50,100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "between",
+									"value": "50,100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:16:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"01HXGDYVVMVEA4DWZC1S127MM4\",\n            \"name\": \"Combination Pliers\",\n            \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra felis nec pellentesque feugiat. Donec faucibus arcu maximus, convallis nisl eu, placerat dolor. Morbi finibus neque nec tincidunt pharetra. Sed eget tortor malesuada, mollis enim id, condimentum nisi. In viverra quam at bibendum ultricies. Aliquam quis eros ex. Etiam at pretium massa, ut pharetra tortor. Sed vel metus sem. Suspendisse ac molestie turpis. Duis luctus justo massa, faucibus ornare eros elementum et. Vestibulum quis nisl vitae ante dapibus tempor auctor ut leo. Mauris consectetur et magna at ultricies. Proin a aliquet turpis.\",\n            \"price\": 14.15,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n            \"product_image_id\": \"01HXGDYVV5JKVMCSA993J1JBWG\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV5JKVMCSA993J1JBWG\",\n                \"by_name\": \"Helinton Fantin\",\n                \"by_url\": \"https://unsplash.com/@fantin\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/W8BNwvOvW4M\",\n                \"file_name\": \"pliers01.jpeg\",\n                \"title\": \"Combination pliers\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVPTM7J9988ZVTBCFJY\",\n            \"name\": \"Pliers\",\n            \"description\": \"Nunc vulputate, orci at congue faucibus, enim neque sodales nulla, nec imperdiet augue odio vel nibh. Etiam auctor, ligula quis gravida dictum, mi massa commodo ante, sollicitudin pulvinar nulla justo hendrerit lacus. Vivamus rutrum pharetra molestie. Fusce tristique odio tristique, elementum est eget, porttitor diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas at ligula sed sapien porta pretium. Aenean cursus, magna in blandit consectetur, libero orci aliquet eros, et maximus nunc est eu dolor. Aenean non pellentesque eros. In sodales orci eget orci fringilla, vitae feugiat elit porta. Etiam aliquam, mi pretium tempus mattis, mauris ipsum gravida risus, at tempor nulla ipsum molestie ligula. Ut placerat, urna sit amet tincidunt volutpat, ex orci luctus purus, nec laoreet dolor sapien vel erat.\",\n            \"price\": 12.01,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDT\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDT\",\n                \"by_name\": \"Everyday basics\",\n                \"by_url\": \"https://unsplash.com/@zanardi\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/I8eTuMmxIfo\",\n                \"file_name\": \"pliers02.jpeg\",\n                \"title\": \"Pliers\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVQ2039YHRB5VQ75R3Y\",\n            \"name\": \"Bolt Cutters\",\n            \"description\": \"Aliquam viverra scelerisque tempus. Ut vehicula, ex sed elementum rhoncus, sem neque vehicula turpis, sit amet accumsan mauris justo non magna. Cras ut vulputate lectus, sit amet sollicitudin enim. Quisque sit amet turpis ut orci pulvinar vestibulum non at velit. Quisque ultrices malesuada felis non rutrum. Sed molestie lobortis nisl, in varius arcu dictum vel. In sit amet fringilla orci. Quisque ac magna dui. Nam pulvinar nulla sed commodo ultricies. Suspendisse aliquet quis eros sit amet gravida. Aenean vitae arcu in sapien sodales commodo.\",\n            \"price\": 48.41,\n            \"is_location_offer\": true,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN4A\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDV\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDV\",\n                \"by_name\": \"Michael Dziedzic\",\n                \"by_url\": \"https://unsplash.com/@lazycreekimages\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/pM9pkc9J918\",\n                \"file_name\": \"pliers03.jpeg\",\n                \"title\": \"Bolt cutters\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVSTPKE9070GQKKJ1W5\",\n            \"name\": \"Long Nose Pliers\",\n            \"description\": \"Phasellus consequat fermentum quam id sodales. Curabitur nec dui orci. Fusce id turpis laoreet, lobortis ex non, finibus libero. Vivamus id enim eu nibh placerat maximus. Aenean semper dui a laoreet venenatis. Vestibulum at ligula quam. Donec interdum tristique neque lacinia laoreet. Sed auctor fermentum congue. Integer aliquet vulputate feugiat. Quisque malesuada diam iaculis ornare maximus. Mauris quam massa, sodales at mattis non, consectetur eget magna. Aliquam eget congue metus, sed congue leo. Nam sit amet est id ligula volutpat pharetra non id nisl. Vestibulum ac enim vitae nisi tempus cursus. Aliquam erat volutpat.\",\n            \"price\": 14.24,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN4A\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDW\",\n            \"in_stock\": false,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDW\",\n                \"by_name\": \"Brett Jordan\",\n                \"by_url\": \"https://unsplash.com/@brett_jordan\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/GamuDTVm02g\",\n                \"file_name\": \"pliers04.jpeg\",\n                \"title\": \"Long nose pliers\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVTSC2TDC520TJEDM7W\",\n            \"name\": \"Slip Joint Pliers\",\n            \"description\": \"Ut cursus dui non ante convallis, facilisis auctor leo luctus. Maecenas a rhoncus metus. Sed in efficitur dolor, vulputate accumsan odio. Sed ex quam, dictum in fringilla at, vestibulum eu sem. Quisque ante orci, vulputate non porttitor eu, aliquet et nunc. Nunc a rhoncus dui. Nunc ac est non eros scelerisque maximus at a eros. Phasellus sed egestas diam, at tempus erat. Morbi sit amet congue tellus, at accumsan magna. Etiam non ornare nisl, sed luctus nisi. Pellentesque ut odio ut sapien aliquet eleifend.\",\n            \"price\": 9.17,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN4A\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDX\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDX\",\n                \"by_name\": \"Yasin Hasan\",\n                \"by_url\": \"https://unsplash.com/@yasin\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/dwlxTSpfKXg\",\n                \"file_name\": \"pliers05.jpeg\",\n                \"title\": \"Slip joint pliers\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVV6HX9H1A8GN9WBQ25\",\n            \"name\": \"Claw Hammer with Shock Reduction Grip\",\n            \"description\": \"Nam efficitur, turpis molestie bibendum lobortis, risus arcu congue tortor, id consequat nibh sem a libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean non tincidunt tortor, vel ultricies tortor. Vivamus pulvinar efficitur arcu sit amet accumsan. Aenean dui erat, bibendum at dapibus in, feugiat non eros. Duis sodales felis ex, quis ullamcorper odio interdum non. Ut viverra magna eu augue luctus, quis convallis lectus auctor. Duis ultrices erat urna. Aliquam augue odio, mattis vitae finibus in, pellentesque nec dui. Curabitur nec odio in augue posuere posuere. Vivamus ante est, iaculis ut interdum et, hendrerit ac ante. Fusce ac venenatis neque, id fermentum nulla. Quisque tristique ornare nisi, vitae convallis dui faucibus quis. Vestibulum vel dapibus dolor.\",\n            \"price\": 13.41,\n            \"is_location_offer\": true,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQXW\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDY\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDY\",\n                \"by_name\": \"iMattSmart\",\n                \"by_url\": \"https://unsplash.com/@imattsmart\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/jaLaLQdkBOE\",\n                \"file_name\": \"hammer01.jpeg\",\n                \"title\": \"Claw Hammer\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVWZV1DVHTF9EHKDJR8\",\n            \"name\": \"Hammer\",\n            \"description\": \"Mauris mollis odio est, ac vehicula dui lobortis vel. Cras facilisis, mauris ut vehicula dignissim, ex nunc sollicitudin velit, a fermentum mi odio ut massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien vel libero fermentum rhoncus. Etiam ac imperdiet arcu, ac accumsan risus. Fusce vitae lacinia sem, sit amet sagittis lorem. Curabitur efficitur ultricies sem, eu placerat ante tincidunt a. Morbi faucibus ullamcorper mi a mollis. Aenean sed magna aliquam, mollis dui at, condimentum ex. Donec blandit bibendum enim, lacinia vestibulum tellus laoreet sollicitudin. In vitae ullamcorper metus, ut interdum augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam scelerisque dignissim varius. Nulla facilisi. Praesent eros dolor, ultricies sit amet pellentesque porttitor, pretium ut lectus. Nullam tempus tellus sapien, non condimentum mauris volutpat eget.\",\n            \"price\": 12.58,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQXW\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDZ\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQDZ\",\n                \"by_name\": \"Jozsef Hocza\",\n                \"by_url\": \"https://unsplash.com/@hocza\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/D3nouOYbALc\",\n                \"file_name\": \"hammer02.jpeg\",\n                \"title\": \"Hammer\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVYPY3761W34J3GDM4C\",\n            \"name\": \"Claw Hammer\",\n            \"description\": \"Cras pulvinar nisl a quam fringilla tempus. Sed lectus urna, mattis quis arcu eget, aliquam laoreet mauris. Praesent accumsan facilisis eros, ac mattis nulla interdum nec. Phasellus ultrices eu metus in lobortis. Donec ac efficitur orci. Phasellus nulla neque, congue nec tincidunt id, ultrices vel sapien. Curabitur gravida ex leo, laoreet mollis arcu blandit vel.\",\n            \"price\": 11.48,\n            \"is_location_offer\": true,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN4A\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQXW\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQE0\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQE0\",\n                \"by_name\": \"Andrew George\",\n                \"by_url\": \"https://unsplash.com/@andrewjoegeorge\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/YU2mCvXR0wA\",\n                \"file_name\": \"hammer03.jpeg\",\n                \"title\": \"Claw Hammer\"\n            }\n        },\n        {\n            \"id\": \"01HXGDYVVZ0R99FZ0STE0M5GHJ\",\n            \"name\": \"Thor Hammer\",\n            \"description\": \"Donec malesuada tempus purus. Integer sit amet arcu magna. Sed vel laoreet ligula, non sollicitudin ex. Mauris euismod ac dolor venenatis lobortis. Aliquam iaculis at diam nec accumsan. Ut sodales sed elit et imperdiet. Maecenas vitae molestie mauris. Integer quis placerat libero, in finibus diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.\",\n            \"price\": 11.14,\n            \"is_location_offer\": false,\n            \"is_rental\": false,\n            \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQXW\",\n            \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQE1\",\n            \"in_stock\": true,\n            \"product_image\": {\n                \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQE1\",\n                \"by_name\": \"ANIRUDH\",\n                \"by_url\": \"https://unsplash.com/@lanirudhreddy\",\n                \"source_name\": \"Unsplash\",\n                \"source_url\": \"https://unsplash.com/photos/3esjG-nlgyk\",\n                \"file_name\": \"hammer04.jpeg\",\n                \"title\": \"Hammer\"\n            }\n        }\n    ],\n    \"from\": 1,\n    \"last_page\": 6,\n    \"per_page\": 9,\n    \"to\": 9,\n    \"total\": 53\n}"
+				}
+			]
+		},
+		{
+			"name": "Related Product Check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"All product category has Safety Gear\", function () {\r",
+							"    pm.expect(pm.response.json().every(product => product.category.name === \"Safety Gear\")).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/{{Safety}}/related",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"{{Safety}}",
+						"related"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/{{Safety}}/related",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"{{Safety}}",
+								"related"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:27:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"01HXGDYVWNEGZPTP0YAYDNMJRZ\",\n        \"name\": \"Safety Helmet Face Shield\",\n        \"description\": \"Quisque nisi lectus, laoreet in enim maximus, auctor porta nunc. Vivamus in dui condimentum, aliquam mi cursus, scelerisque nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut facilisis quam sit amet enim commodo ultrices. Quisque ac ante vehicula quam aliquet semper. Phasellus fermentum orci nec dui accumsan, non tincidunt ante facilisis. Ut laoreet blandit euismod.\",\n        \"price\": 35.62,\n        \"is_location_offer\": false,\n        \"is_rental\": false,\n        \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n        \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n        \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEY\",\n        \"in_stock\": true,\n        \"product_image\": {\n            \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEY\",\n            \"by_name\": \"Laurence Ziegler\",\n            \"by_url\": \"https://unsplash.com/@laurenceziegler\",\n            \"source_name\": \"Unsplash\",\n            \"source_url\": \"https://unsplash.com/photos/a-helmet-that-is-on-top-of-a-pile-of-leaves-niKVn6qfYAs\",\n            \"file_name\": \"goggles02.jpeg\",\n            \"title\": \"Safety Helmet Face Shield\"\n        },\n        \"category\": {\n            \"id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"name\": \"Safety Gear\",\n            \"slug\": \"safety-gear\",\n            \"parent_id\": \"01HXGDYVTRFZCMYYFWZVXTKGD4\"\n        },\n        \"brand\": {\n            \"id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"name\": \"ForgeFlex Tools\",\n            \"slug\": \"forgeflex-tools\"\n        }\n    },\n    {\n        \"id\": \"01HXGDYVWPZTV18HYAAV2GCDZM\",\n        \"name\": \"Protective Gloves\",\n        \"description\": \"Vivamus vitae nisl vel felis condimentum condimentum. Morbi molestie placerat fermentum. Morbi id dictum ex. Vestibulum ut ex convallis, imperdiet enim bibendum, dictum nulla. Phasellus porttitor molestie est ac tincidunt. Praesent in dolor finibus metus hendrerit sodales non non tellus. Mauris odio justo, tincidunt nec commodo in, semper id ante.\",\n        \"price\": 21.42,\n        \"is_location_offer\": true,\n        \"is_rental\": false,\n        \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n        \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n        \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEZ\",\n        \"in_stock\": true,\n        \"product_image\": {\n            \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEZ\",\n            \"by_name\": \"Roman Kraft\",\n            \"by_url\": \"https://unsplash.com/@iamromankraft\",\n            \"source_name\": \"Unsplash\",\n            \"source_url\": \"https://unsplash.com/photos/pair-of-brown-and-yellow-leather-gloves-n_vD-7RxA3Q\",\n            \"file_name\": \"gloves01.jpeg\",\n            \"title\": \"Protective Gloves\"\n        },\n        \"category\": {\n            \"id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"name\": \"Safety Gear\",\n            \"slug\": \"safety-gear\",\n            \"parent_id\": \"01HXGDYVTRFZCMYYFWZVXTKGD4\"\n        },\n        \"brand\": {\n            \"id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"name\": \"ForgeFlex Tools\",\n            \"slug\": \"forgeflex-tools\"\n        }\n    },\n    {\n        \"id\": \"01HXGDYVWQFQZBV5FRFT0N7XK1\",\n        \"name\": \"Super-thin Protection Gloves\",\n        \"description\": \"Quisque quis egestas lacus, vel lacinia tortor. Phasellus consectetur enim ut est luctus scelerisque. Morbi vestibulum, dui nec vehicula pharetra, lectus erat vulputate magna, at placerat arcu diam id leo. In accumsan elit orci, ut eleifend ligula semper eu. Maecenas faucibus egestas fermentum. Donec et elit nec est facilisis ornare placerat ut ipsum. Praesent facilisis enim a massa semper cursus. Etiam vitae lectus malesuada nulla sagittis rutrum. Nulla facilisi. Duis aliquet diam iaculis dui laoreet, in posuere orci facilisis. Vestibulum mollis lorem a ex tempor, nec posuere nisi convallis.\",\n        \"price\": 38.45,\n        \"is_location_offer\": true,\n        \"is_rental\": false,\n        \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n        \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n        \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF0\",\n        \"in_stock\": true,\n        \"product_image\": {\n            \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF0\",\n            \"by_name\": \"Gabriel Alenius\",\n            \"by_url\": \"https://unsplash.com/@gabrielalenius\",\n            \"source_name\": \"Unsplash\",\n            \"source_url\": \"https://unsplash.com/photos/a-person-wearing-a-yellow-jacket-and-black-gloves-dA-oPHeQZkA\",\n            \"file_name\": \"gloves02.jpeg\",\n            \"title\": \"Super-thin Protection Gloves\"\n        },\n        \"category\": {\n            \"id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"name\": \"Safety Gear\",\n            \"slug\": \"safety-gear\",\n            \"parent_id\": \"01HXGDYVTRFZCMYYFWZVXTKGD4\"\n        },\n        \"brand\": {\n            \"id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"name\": \"ForgeFlex Tools\",\n            \"slug\": \"forgeflex-tools\"\n        }\n    },\n    {\n        \"id\": \"01HXGDYVWS9E85P55X13XDWC7Z\",\n        \"name\": \"Construction Helmet\",\n        \"description\": \"Integer lobortis diam tellus. Sed blandit felis non nisl pellentesque ornare. In hendrerit ante vel leo sodales, in hendrerit urna ultrices. Nunc fermentum vitae tellus id convallis. Praesent vulputate ligula vitae luctus mattis. Donec vestibulum urna sed hendrerit posuere. Praesent vel erat ex. Sed sagittis eros eu dui pulvinar, vel varius velit consectetur. Morbi dignissim mattis neque. Donec rhoncus tempor ornare. Suspendisse congue nulla nec fringilla ultricies. Vestibulum hendrerit, risus vel venenatis vulputate, neque sem dapibus velit, ut tristique libero velit consequat augue.\",\n        \"price\": 41.29,\n        \"is_location_offer\": false,\n        \"is_rental\": false,\n        \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n        \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n        \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF1\",\n        \"in_stock\": true,\n        \"product_image\": {\n            \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF1\",\n            \"by_name\": \"Ümit Yıldırım\",\n            \"by_url\": \"https://unsplash.com/@umityildirim\",\n            \"source_name\": \"Unsplash\",\n            \"source_url\": \"https://unsplash.com/photos/red-hard-hat-on-pavement-9OB46apMbC4\",\n            \"file_name\": \"helmet01.jpeg\",\n            \"title\": \"Construction Helmet\"\n        },\n        \"category\": {\n            \"id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"name\": \"Safety Gear\",\n            \"slug\": \"safety-gear\",\n            \"parent_id\": \"01HXGDYVTRFZCMYYFWZVXTKGD4\"\n        },\n        \"brand\": {\n            \"id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"name\": \"ForgeFlex Tools\",\n            \"slug\": \"forgeflex-tools\"\n        }\n    },\n    {\n        \"id\": \"01HXGDYVWTXQJ856EC8NSKFZNP\",\n        \"name\": \"Ear Protection\",\n        \"description\": \"Nullam egestas nunc at massa ullamcorper euismod. Phasellus ac feugiat dui. Ut et mauris id turpis maximus molestie ac in nunc. Cras eleifend auctor libero sed tempor. Phasellus varius, neque ut egestas fringilla, libero purus feugiat eros, et viverra leo dui a diam. Sed facilisis et nibh eu congue. Praesent consequat feugiat neque ac porta. Morbi et viverra urna. Curabitur sit amet mauris vel velit ultricies sollicitudin et eu leo. Mauris et ullamcorper ex.\",\n        \"price\": 18.58,\n        \"is_location_offer\": true,\n        \"is_rental\": false,\n        \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n        \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n        \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF8\",\n        \"in_stock\": true,\n        \"product_image\": {\n            \"id\": \"01HXGDYVV6FWQ1VZ0N06JYTQF8\",\n            \"by_name\": \"cetteup\",\n            \"by_url\": \"https://unsplash.com/@cetteup\",\n            \"source_name\": \"Unsplash\",\n            \"source_url\": \"https://unsplash.com/photos/black-and-red-3m-earmuffs-beside-miter-saw-IC5sX-7PRN8\",\n            \"file_name\": \"earprotection01.jpeg\",\n            \"title\": \"Ear Protection\"\n        },\n        \"category\": {\n            \"id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n            \"name\": \"Safety Gear\",\n            \"slug\": \"safety-gear\",\n            \"parent_id\": \"01HXGDYVTRFZCMYYFWZVXTKGD4\"\n        },\n        \"brand\": {\n            \"id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n            \"name\": \"ForgeFlex Tools\",\n            \"slug\": \"forgeflex-tools\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Cart is successfully created\", function () {\r",
+							"    pm.environment.set(\"cartID\", pm.response.json().id); \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/carts",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/carts/{{cartID}}",
+							"path": [
+								"carts",
+								"{{cartID}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:30:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"01hxgfq1s6bd04vhbdmyts8pnr\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add To Cart 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Product added to cart successfully\", function () {\r",
+							"    pm.expect(pm.response.json().result).to.equal(\"item added or updated\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": \"{{Safety}}\",\r\n  \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/carts/{{cartID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"carts",
+						"{{cartID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": \"{{Safety}}\",\r\n  \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/carts/{{cartID}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"carts",
+								"{{cartID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:40:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"item added or updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Carts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"var cartItems = jsonData.cart_items;\r",
+							"var itemIDs = cartItems.map(item => item.product_id);\r",
+							"\r",
+							"pm.test(\"Cart items contain Safety ID\", function () {\r",
+							"    var safetyID = pm.environment.get(\"Safety\");\r",
+							"    pm.expect(itemIDs).to.include(safetyID);\r",
+							"});\r",
+							"console.log(itemIDs);\r",
+							"pm.test(\"Cart items contain Pricey ID\", function () {\r",
+							"    var priceyID = pm.environment.get(\"Pricey\");\r",
+							"    pm.expect(itemIDs).to.include(priceyID);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/carts/{{cartID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"carts",
+						"{{cartID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": \"{{Safety}}\",\r\n  \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/carts/{{cartID}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"carts",
+								"{{cartID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:40:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"item added or updated\"\n}"
+				},
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/carts/{{cartID}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"carts",
+								"{{cartID}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 May 2024 05:53:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.41 (Ubuntu)"
+						},
+						{
+							"key": "Charset",
+							"value": "utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Disposition"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"01hxgfq1s6bd04vhbdmyts8pnr\",\n    \"additional_discount_percentage\": null,\n    \"lat\": null,\n    \"lng\": null,\n    \"cart_items\": [\n        {\n            \"id\": \"01hxgg5d338rjwq13rmbz3v7ht\",\n            \"quantity\": 4,\n            \"discount_percentage\": null,\n            \"cart_id\": \"01hxgfq1s6bd04vhbdmyts8pnr\",\n            \"product_id\": \"01HXGDYVWM1B95SC714PAQWBAD\",\n            \"product\": {\n                \"id\": \"01HXGDYVWM1B95SC714PAQWBAD\",\n                \"name\": \"Safety Goggles\",\n                \"description\": \"Sed urna lectus, commodo ut dolor finibus, condimentum posuere purus. Phasellus faucibus, ex in congue mattis, purus ipsum tristique sem, vitae elementum arcu metus nec lacus. Fusce convallis tellus ornare metus hendrerit pellentesque. In porta leo in iaculis eleifend. Duis in diam ut ante finibus condimentum non eget massa. Suspendisse potenti. Donec justo ligula, scelerisque ac facilisis eu, sollicitudin eu lectus. Mauris hendrerit fermentum sapien.\",\n                \"price\": 24.26,\n                \"is_location_offer\": false,\n                \"is_rental\": false,\n                \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n                \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQYA\",\n                \"product_image_id\": \"01HXGDYVV6FWQ1VZ0N06JYTQEX\",\n                \"in_stock\": true\n            }\n        },\n        {\n            \"id\": \"01hxgge734trrvvjyhx0d03g1w\",\n            \"quantity\": 1,\n            \"discount_percentage\": null,\n            \"cart_id\": \"01hxgfq1s6bd04vhbdmyts8pnr\",\n            \"product_id\": \"01HXGDYVVMVEA4DWZC1S127MM4\",\n            \"product\": {\n                \"id\": \"01HXGDYVVMVEA4DWZC1S127MM4\",\n                \"name\": \"Combination Pliers\",\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra felis nec pellentesque feugiat. Donec faucibus arcu maximus, convallis nisl eu, placerat dolor. Morbi finibus neque nec tincidunt pharetra. Sed eget tortor malesuada, mollis enim id, condimentum nisi. In viverra quam at bibendum ultricies. Aliquam quis eros ex. Etiam at pretium massa, ut pharetra tortor. Sed vel metus sem. Suspendisse ac molestie turpis. Duis luctus justo massa, faucibus ornare eros elementum et. Vestibulum quis nisl vitae ante dapibus tempor auctor ut leo. Mauris consectetur et magna at ultricies. Proin a aliquet turpis.\",\n                \"price\": 14.15,\n                \"is_location_offer\": false,\n                \"is_rental\": false,\n                \"brand_id\": \"01HXGDYVT0KNGZBRAFJE5GPN49\",\n                \"category_id\": \"01HXGDYVTYE28B8MNDWN77JQY0\",\n                \"product_image_id\": \"01HXGDYVV5JKVMCSA993J1JBWG\",\n                \"in_stock\": true\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add To Cart 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Product added to cart successfully\", function () {\r",
+							"    pm.expect(pm.response.json().result).to.equal(\"item added or updated\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": \"{{Pricey}}\",\r\n  \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/carts/{{cartID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"carts",
+						"{{cartID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
